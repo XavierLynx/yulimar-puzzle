@@ -8,13 +8,14 @@
 </head>
 
 <body>
+
 <div class="w3-panel w3-marging" style="max-width: 900px;">
 
-    <div class="w3-content w3-center">
-        <button class="w3-margin w3-btn w3-red" onclick="juegoNuevo()">Juego Nuevo</button> 
+    <div class="w3-content w3-center" id="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/suY7i1lcfZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
-    <div class="w3-padding w3-blue w3-center">
+    
+    <div class="w3-padding w3-blue w3-center" id="jugar" style="display:none">
         <div class="w3-bar">
             <img id="id11" class="w3-bar-item w3-button w3-padding-small" onclick="mover(id)" src="img/img_01.jpg" style="width:auto" alt="_1">
             <img id="id12" class="w3-bar-item w3-button w3-padding-small" onclick="mover(id)" src="img/img_02.jpg" style="width:auto" alt="_2">
@@ -39,6 +40,10 @@
             <img id="id43" class="w3-bar-item w3-button w3-padding-small" onclick="mover(id)" src="img/img15.jpg" style="width:auto" alt="15">
             <img id="id44" class="w3-bar-item w3-button w3-padding-small w3-opacity-max" onclick="mover(id)" src="img/img16.jpg" style="width:auto" alt="__">
         </div> -->
+    </div>
+
+    <div class="w3-content w3-center">
+        <button class="w3-margin w3-btn w3-deep-purple" id="boton" onclick="juegoNuevo()">Puzzle - clic para jugar</button> 
     </div>
 </div>
     <script src="js/myScripts.js"></script>

@@ -26,10 +26,27 @@ function mover(pieza) {
 }
 
 function juegoNuevo() {
-    piezas = ["id11","id12","id13","id14","id21","id22","id23","id24","id31","id32","id33","id34"];
+
+    jugar = document.getElementById("jugar").style;
+    video = document.getElementById("video").style;
+    boton = document.getElementById("boton");
     
-    for (let i = 0; i < 1000; i++) {
-        var x = Math.floor((Math.random() * 12) + 0);
-        mover(piezas[x]);
+    if (jugar.display == "none") {
+
+        jugar.display = "block";
+        video.display = "none";
+        boton.innerHTML = "Regresar al video"
+        
+        piezas = ["id11","id12","id13","id14","id21","id22","id23","id24","id31","id32","id33","id34"];
+        for (let i = 0; i < 1000; i++) {
+            var x = Math.floor((Math.random() * 12) + 0);
+            mover(piezas[x]);
+        }
+    } else {
+
+        jugar.display = "none";
+        video.display = "block";
+        boton.innerHTML = "Puzzle - clic para jugar"
+
     }
 }
